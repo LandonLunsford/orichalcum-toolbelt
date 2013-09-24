@@ -6,7 +6,6 @@ package orichalcum.tool.image.encoder
 	public interface IImageEncoder 
 	{
 		function encode(image:BitmapData):ByteArray;
-		function get fileExtension():String;
 	}
 
 }
