@@ -7,16 +7,11 @@ package orichalcum.tool.image.encoder
 	public class JPGEncoder implements IImageEncoder
 	{
 		
-		static private const FILE_EXTENSION:String = '.jpg';
+		private var _delegate:com.adobe.images.JPGEncoder = new com.adobe.images.JPGEncoder;
 		
 		public function encode(image:BitmapData):ByteArray 
 		{
-			return com.adobe.images.JPGEncoder.encode(image);
-		}
-		
-		public function get fileExtension():String 
-		{
-			return FILE_EXTENSION;
+			return _delegate.encode(image);
 		}
 		
 	}
